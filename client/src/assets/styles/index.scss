@@ -1,0 +1,430 @@
+/** @format */
+
+@import "./theme";
+
+* {
+  box-sizing: border-box;
+}
+
+// -------------------- scroll style ---------------------
+::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 0.25rem;
+  &:hover {
+    width: 1rem !important;
+  }
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $element;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $placeholder;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background: $text;
+  }
+}
+
+// ----------------- button style ---------------------
+.e-btn {
+  display: inline-block;
+  font-size: 16px;
+  transition: 0.5s;
+  background-color: $element;
+  color: $text;
+  outline: none;
+  border-radius: 6px;
+  border: none;
+  border: 1px solid $element;
+
+  &:not(:disabled):active {
+    transition: 0.15s;
+    // background-color: #15232E;
+    border-color: $blue;
+    box-shadow: 0 0 1px 3px $shadow_blue;
+  }
+  &:not(:disabled):focus {
+    border-color: $blue;
+    box-shadow: 0 0 1px 3px $shadow_blue;
+  }
+
+  &:not(:disabled):hover {
+    border-color: $blue;
+    color: $blue;
+  }
+
+  &:disabled {
+    // background-color: #747474;
+    color: $placeholder;
+    cursor: not-allowed;
+  }
+}
+
+// -------------------- input style -------------------------
+.e-input {
+  width: 320px;
+  height: 2.5rem;
+  // background-color: #212b37;
+  // background-color: $card;
+  background-color: transparent;
+  border: 1px solid $border;
+  border-radius: 6px;
+  color: $h_text;
+  padding: 0.25rem 0.5rem;
+  outline: none;
+  font-size: 16px;
+  &::placeholder {
+    color: $placeholder;
+  }
+
+  &:focus {
+    transition: 0.3s;
+    background-color: $bg;
+    border-color: $blue;
+    box-shadow: 0 0 1px 2px $shadow_blue;
+  }
+  &:hover {
+    border-color: $blue;
+  }
+
+  &[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+}
+
+.e-input.not-bg {
+  background: transparent;
+}
+
+// ---------------------- checkbox style------------------------
+.e-checkbox[type="checkbox"] {
+  width: 1.5rem;
+  height: 1.5rem;
+  -webkit-appearance: none;
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // background-color: $bg;
+  border: 1px solid $border;
+  border-radius: 50%;
+  outline: none;
+  transition: 0.5s transform ease;
+  cursor: pointer;
+}
+.e-checkbox[type="checkbox"]::before {
+  content: "";
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  transform: scale(0);
+  transform-origin: center center;
+  transition: 120ms transform ease-in-out;
+  background-color: $placeholder;
+}
+.e-checkbox[type="checkbox"]:checked {
+  // border-color: $light_blue;
+  &::before {
+    transform: scale(1);
+  }
+}
+.e-checkbox[type="checkbox"]:active {
+  border-color: $light_blue;
+  box-shadow: 0 0 0px 3px $shadow_blue;
+  // transition: 120ms transform ease-in-out;
+  &::before {
+    transform: scale(1);
+  }
+}
+
+// ------------------------ dropdown style --------------------
+.e-dropdown {
+  position: relative;
+  transform-origin: top center;
+  transition: 0.3s linear;
+
+  .drop-list {
+    min-width: 160px;
+    height: 0;
+    background-color: $element;
+    border-radius: 0.5rem;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.25rem);
+    overflow: hidden;
+    z-index: 100;
+    // box-shadow: 0px 6px 24px 0 rgba(22, 28, 34, 0.2);
+
+    transform-origin: top center;
+    transition: 0.1s linear;
+
+    .drop-item {
+      padding: 0.5rem 0.75rem;
+      color: $text;
+      cursor: pointer;
+
+      &:hover {
+        background-color: $card;
+        color: $h_text;
+      }
+
+      .drop-item-icon {
+        margin-right: 0.5rem;
+      }
+    }
+    .drop-item.delete {
+      color: #a63636;
+      &:hover {
+        background-color: rgba(166, 54, 54, 0.2);
+        color: #a42020;
+      }
+    }
+  }
+
+  .show-drop {
+    min-width: 160px;
+    min-height: 1.5rem;
+    height: auto;
+    padding: 0.5rem 0;
+  }
+}
+
+// ------------------ table style ---------------------------
+.e-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  // overflow-y: hidden;
+  // overflow-x: auto;
+
+  thead tr:first-child() {
+    border-to th {
+      &:first-child() {
+        border-top-left-radius: 0.5rem;
+      }
+      &:last-child() {
+        border-top-right-radius: 0.5rem;
+      }
+    }
+  }
+
+  thead tr {
+    background: $element;
+  }
+
+  tbody tr {
+    transition: 0.2s ease-in;
+    &:hover {
+      // background: rgba(100, 109, 116, 0.1);
+      // background: rgba($color: #000000, $alpha: 0.2);
+      background: $element;
+    }
+  }
+
+  td,
+  th {
+    border: 1px solid $border;
+  }
+
+  & th,
+  & td {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .table-striped tbody tr:nth-child(2n-1) {
+    // background: darken($card, 50%);
+    // background: lightness($color: #000000);
+    // background: rgba($element, 0.5);
+    @mixin background-opacity($color, $opacity) {
+      background: $color; /*Fallback */
+      background: rgba($color, $opacity);
+    }
+
+      @include background-opacity($element, 0.5);
+  }
+}
+
+// ------------------- message style -------------------------
+
+.e-message {
+  position: absolute;
+  top: 0;
+  left: -50%;
+  // display: inline-block;
+  // height: 0;
+  transform: translateX(50%);
+  background-color: $card;
+  padding: 0.25rem 0.5rem;
+  color: $text;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+  animation-duration: 1s;
+  // animation: animate_message;
+  // overflow: hidden;
+}
+
+@keyframes animate_message {
+  0% {
+    top: -100px;
+  }
+  20% {
+    top: 10px;
+    // height: auto;
+  }
+  80% {
+    top: 10px;
+    // height: auto;
+  }
+  100% {
+    top: -100px;
+  }
+}
+
+// ------------------------ other style ---------------------------------------
+
+// border style
+.e-border {
+  border: 1px solid $border;
+}
+.e-border-blue {
+  border: 1px solid $blue;
+}
+
+.e-card {
+  border-radius: 1rem;
+  background-color: $card;
+  padding: 0.5rem;
+}
+.e-card-shadow {
+  // box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+  box-shadow: 4px 4px 50px -19px rgba(34, 60, 80, .2);
+}
+
+// background color style
+.bg {
+  background-color: $bg;
+}
+.bg-card {
+  background-color: $card;
+}
+.bg-element {
+  background-color: $element !important;
+}
+.color-blue {
+  color: $blue;
+}
+
+// width
+.w_1 {
+  width: 1rem;
+}
+.w_2 {
+  width: 2rem;
+}
+.w_4 {
+  width: 4rem;
+}
+.w_6 {
+  width: 6rem;
+}
+.w_8 {
+  width: 8rem;
+}
+.w_10 {
+  width: 10rem;
+}
+.w_12 {
+  width: 12rem;
+}
+.w_15 {
+  width: 15rem;
+}
+
+// height
+.h_0-5 {
+  height: 0.5rem !important;
+}
+.h_1 {
+  height: 1rem !important;
+}
+.h_1-5 {
+  height: 1.5rem !important;
+}
+.h_2 {
+  height: 2rem !important;
+}
+.h_2-5 {
+  height: 2.5rem !important;
+}
+.h_3 {
+  height: 3rem !important;
+}
+.h_4 {
+  height: 4rem !important;
+}
+.h_6 {
+  height: 6rem !important;
+}
+.h_8 {
+  height: 8rem !important;
+}
+.h_10 {
+  height: 10rem !important;
+}
+.h_12 {
+  height: 12rem !important;
+}
+.h_15 {
+  height: 15rem !important;
+}
+.h_16 {
+  height: 16rem !important;
+}
+.h_20 {
+  height: 20rem !important;
+}
+.h_24 {
+  height: 24rem !important;
+}
+.h_36 {
+  height: 36rem !important;
+}
+.h-100 {
+  height: 100%;
+}
+
+//  flex
+.d-f {
+  display: flex;
+  align-items: center;
+}
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// sceleton loading
+.e-skeleton {
+  background: $card;
+  background: linear-gradient(110deg, $card 6%, $element 18%, $card 33%);
+  border-radius: 5px;
+  background-size: 200% 100%;
+  animation: 1.5s skeleton linear infinite;
+}
+@keyframes skeleton {
+  to {
+    background-position-x: -200%;
+  }
+}

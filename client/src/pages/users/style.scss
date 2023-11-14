@@ -1,0 +1,95 @@
+/** @format */
+
+@import "../../assets/styles/theme";
+
+.user-wrapper {
+
+  *{
+    color: $text;
+  }
+
+  .actions{
+    min-width: 70px;
+    max-width: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .view{
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .edit{
+      font-size: 15px;
+      cursor: pointer;
+    }
+    .delete{
+      font-size: 15px;
+      cursor: pointer;
+      color: red !important;
+    }
+  }
+
+
+  .t-table {
+    width: 100%;
+    display: table;
+    border: 1px solid $border;
+    border-radius: .25rem;
+    // margin-top: 2rem;
+
+    .t-head{
+      background-color: $element;
+      .t-th{
+        color: $h_text;
+        font-weight: 500;
+      }
+    }
+
+    .t-tr {
+      display: table-row;
+      transition: .2s ease-in;
+
+      &:hover:not(.not-hover){
+        background-color: $element;
+      }
+
+      &:nth-child(2n-1){
+
+        // background-color: rgb(red($element),green($element),blue($element));
+      }
+
+      &:first-child{
+        .t-th:first-child{
+          border-top-left-radius: .25rem;
+        }
+        .t-th:last-child{
+          border-top-right-radius: .25rem;
+        }
+      }
+      &:last-child{
+        .t-td{
+          border-bottom: none;
+
+          &:first-child{
+            border-bottom-left-radius: .25rem;
+          }
+          &:last-child{
+            border-bottom-right-radius: .25rem;
+          }
+        }
+      }
+
+      .t-td, .t-th{
+        display: table-cell;
+        border-right: 1px solid $border;
+        border-bottom: 1px solid $border;
+        text-align: start;
+        padding: .25rem .5rem;
+
+        &:last-child{
+          border-right: none;
+        }
+      }
+    }
+  }
+}

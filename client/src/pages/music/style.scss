@@ -1,0 +1,141 @@
+/** @format */
+@import "../../assets/styles/theme";
+
+.music-wrapper {
+  padding: 2rem;
+
+  .header {
+    height: 15rem;
+    border-radius: 1rem;
+    padding: 1rem 2rem;
+    text-align: start;
+    // margin: 2rem;
+
+    .title {
+      width: 60%;
+      font-size: 4rem;
+      font-weight: 700;
+      color: $text;
+    }
+  }
+
+  .category-wrapper {
+    .categories {
+      display: flex;
+      align-items: center;
+      // justify-content: space-between;
+      padding: 1rem 0;
+
+      .category {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        margin-right: 2rem;
+        text-align: start;
+        cursor: pointer;
+
+        .category-name {
+          font-size: 2.4rem;
+          font-weight: 600;
+          color: $shadow_blue;
+        }
+      }
+    }
+  }
+  .artist-wrapper {
+    .artists {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 0;
+
+      .artist {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 50%;
+        padding: 1rem 2rem;
+        text-align: center;
+        cursor: pointer;
+      }
+    }
+  }
+  .podcast-wrapper {
+    .podcasts {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 1rem 0;
+
+      .podcast {
+        height: 15rem;
+        border-radius: 1rem;
+        padding: 1rem 2rem;
+        text-align: start;
+        cursor: pointer;
+
+        .podcast-name {
+          font-size: 2.4rem;
+          font-weight: 600;
+          color: $shadow_blue;
+        }
+      }
+    }
+  }
+
+  .albom-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .title {
+      font-size: 1.75em;
+      color: $h-text;
+    }
+    .see-more {
+      font-size: 1.2rem;
+      color: $text;
+      text-decoration: none;
+
+      &:hover {
+        color: $blue;
+        .see-arrow {
+          animation: hover-arrow 0.5s;
+          animation-fill-mode: forwards;
+        }
+      }
+    }
+
+    @keyframes hover-arrow {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translate(3px);
+      }
+    }
+  }
+
+  .music_list {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 16px;
+    margin: 2rem;
+    border: 1px solid $border;
+
+    div {
+      width: 100%;
+      min-height: 220px;
+      // background-color: #212B37;
+      background-color: $card;
+      img {
+        width: 100%;
+      }
+      h6 {
+        font-size: 1.2rem;
+        margin: 1rem auto;
+      }
+    }
+  }
+}

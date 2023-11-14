@@ -1,0 +1,51 @@
+@import "../../assets/styles/theme";
+
+.login-wrapper{
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  // background: linear-gradient( 135deg, #313866, #504099, #974EC3, #FE7BBF );
+  // background: url('https://i.pinimg.com/564x/8f/d0/51/8fd051849c575b0a98aad724f70ce639.jpg');
+
+  .login-card{
+    // background-image: url('https://img.freepik.com/premium-photo/abstract-scene-geometry-shape-podium-background_85046-178.jpg?w=826');
+    // background-size: cover;
+    // background-position: 0 -100px;
+    position: relative;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    border-radius: 1rem;
+    height: 460px;
+    width: 920px;
+
+    display: flex;
+    background-color: $card;
+
+    img{
+      width: 460px;
+      border-radius: 1rem 0 0 1rem;
+    }
+
+    .login-card2{
+      height: 460px;
+      width: 460px;
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      padding: 2rem 3rem;
+      border-radius: 1rem;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .form-item{
+        text-align: start;
+      }
+    }
+  }
+}
+
+// https://www.pinterest.com/pin/616219161527878334/
+// https://www.pinterest.com/pin/169799848443817362/
