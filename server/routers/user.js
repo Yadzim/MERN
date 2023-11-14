@@ -5,8 +5,23 @@ const mongoose = require("mongoose");
 const router = express.Router();
 
 const UserSchema = new mongoose.Schema({
-  name: String,
-  username: String,
+  name: {type: String, required: true},
+  username: {
+    type: String,
+    required: true,
+    // min: 10, //type: number
+    // max: 300, //type: number
+    // minlength: 3 //chart length
+    // required: () => this.name?.length === 3
+    // enum: ["azizxon", "abror"] //only this words
+    // validate: {
+    //   isAsync: true,
+    //   validator: (val, calback) => { calback(val && val?.length > 0) },
+    //   message: "Username uzunligi 3 dan ko'p bo'lishi kerak"
+    // }
+    // lowercase: true // auto write lowercase
+    // trim: true
+   },
   email: String,
   group_id: String,
 });
@@ -55,7 +70,7 @@ router.get("/", async (req, res) => {
     const users = await User.find(
       filter_like()?.length
         ? {
-            $or: filter_like(),
+            $and: filter_like(),
             ...JSON.parse(query?.filter ?? "{}"),
           }
         : JSON.parse(query?.filter ?? "{}")
