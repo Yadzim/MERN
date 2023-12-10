@@ -1,5 +1,5 @@
 import { RoutesTypeChildren } from "./types";
-import { FaCalendarAlt, FaHome, FaMusic, FaShoppingCart, FaSignInAlt, FaUserAlt } from "react-icons/fa"
+import { FaCalendarAlt, FaCloudRain, FaCloudSun, FaHome, FaMusic, FaShoppingCart, FaSignInAlt, FaUserAlt } from "react-icons/fa"
 import Dashboard from "pages/dashboards";
 import AllMusic from "pages/music";
 import Shop from "pages/shop";
@@ -10,6 +10,7 @@ import ForgotPassword from "pages/register/pages/forgotPassword";
 import SmsCode from "pages/register/pages/smsCode";
 import Users from "pages/users";
 import Groups from "pages/users copy";
+import Weather from "pages/weather";
 
 
 export const public_routes: Array<RoutesTypeChildren> = [
@@ -138,6 +139,19 @@ export const public_routes: Array<RoutesTypeChildren> = [
     config: {
       key: "unlock",
       icon: FaSignInAlt,
+      structure: "layout",
+      exact: true,
+      isMenu: true,
+    },
+    submenu: [],
+  },
+  {
+    name: "Weather",
+    path: "/weather",
+    component: Weather,
+    config: {
+      key: "unlock",
+      icon: FaCloudSun,
       structure: "layout",
       exact: true,
       isMenu: true,

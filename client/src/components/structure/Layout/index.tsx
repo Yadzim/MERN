@@ -8,11 +8,13 @@ const Layout: FC<{ children: React.ReactNode }> = ({ children }): JSX.Element =>
   console.log("layout");
 
   return (
-    <div className="layout">
-      <Header />
-      <Sidebar/>
-      <div className="content">
-      {children}
+    <div className="bg-wrap">
+      <div className="layout">
+        <Header />
+        <Sidebar />
+        <div className="content">
+          {children}
+        </div>
       </div>
     </div>
   )
