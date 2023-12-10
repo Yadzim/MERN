@@ -1,2 +1,26 @@
+
 # MERN
-MongoDB Express React Nodejs. Fullstack 
+This Web Aplication is built by MongoDB Express React Nodejs
+
+![MERN](https://github.com/Yadzim/MERN/tree/main/client/public/MERN.png)
+
+#### Run Aplication:
+
+Run client
+```bash
+cd client
+```
+```bash
+yarn start
+```
+
+Run server
+
+`open new terminal`
+
+```bash
+cd server
+```
+```bash
+yarn run dev
+```

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logo from "assets/images/logo_shop_blue.svg"
+import logo from "assets/images/MERN.svg"
 
 const ForgotPassword: React.FC = (): JSX.Element => {
 
@@ -8,7 +8,7 @@ const ForgotPassword: React.FC = (): JSX.Element => {
     <div className="p-4">
       <div className="mx-auto w-[540px] max-md:w-full mt-12">
         <div className="text-center">
-        <img src={logo} alt="" className='w-12 mx-auto mb-3' />
+        <img src={logo} alt="" className='w-[84px] mx-auto mb-3' />
         <h2 className='text-2xl mb-8' >Reset your password</h2>
         </div>
         <form action="">

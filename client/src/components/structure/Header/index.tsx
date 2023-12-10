@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { FaBars, FaRegHeart, FaShoppingCart, FaSignInAlt, FaUser } from "react-icons/fa";
-import logo from "assets/images/logo_shop_blue.svg"
+import logo from "assets/images/MERN.svg"
 import { changeSidebar } from "store/ui";
 import { useAppDispatch, useAppSelector } from "store";
 import "./style.scss"
@@ -23,7 +23,7 @@ const Header: FC = (): JSX.Element => {
         <div className="logo">
           <img src={logo} alt="" />
           {/* <FaShoppingCart /> */}
-          <h1>OnlineShop</h1>
+          <h1>MERN</h1>
         </div>
         <button className="e-btn py-1 px-2 d-f ms-4" onClick={() => dispatch(changeSidebar(selectTheme))}>
           <FaBars className="burger me-2" /> Categories
