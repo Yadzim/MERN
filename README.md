@@ -2,7 +2,7 @@
 # MERN
 This Web Aplication is built by MongoDB Express React Nodejs
 
-![MERN](https://github.com/Yadzim/MERN/tree/main/client/public/MERN.png)
+![MERN](https://github.com/Yadzim/MERN/blob/main/client/public/MERN.png?raw=true)
 
 #### Run Aplication:
 
