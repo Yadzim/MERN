@@ -61,3 +61,5 @@ const Shop: FC = (): JSX.Element => {
 }
 
 export default Shop
+
+// https://www.figma.com/file/VoU4OU45mM6m2lVQuliwbM/Web-App-Design-with-Midjourney-in-Figma-(Community)?node-id=1838%3A14595&mode=dev
