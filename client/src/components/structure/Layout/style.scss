@@ -12,14 +12,24 @@
    background-repeat: no-repeat;
   //  background-size: 50%;
   //  background: radial-gradient( #1a2035, #010916);
+  //  backdrop-filter: blur(100px);
 
+  :root{
+    --v--bg: var(--v-bg);
+  }
 
    .layout {
      background-color: $bg;
      color: $text;
      overflow: hidden;
      text-align: center;
-    //  backdrop-filter: blur(100px);
+     backdrop-filter: blur(100px);
+     min-height: 100vh;
+    //  background-color: rgba(23, 27, 31, .8);
+    //  background-color: fade(var(--v-bg), 80%);
+    //  $newbg: var(--v-bg);
+    //  background-color: rgba(var(--v-bg), .8);
+    // background-color: #171b1fdd;
 
      *::selection {
        background: #31bd59;

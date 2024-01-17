@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import RoutesMiddleware from "routes/routesMiddleware";
 import { useAppDispatch, useAppSelector } from "store";
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
@@ -16,8 +16,8 @@ const queryClient = new QueryClient({
 
 const App: React.FC = () => {
   const dispatch = useAppDispatch()
-  const theme = useAppSelector(state => state.ui.theme) as "flat" | "dark" | "light";
-  const sidebar = useAppSelector(state => state.ui.sidebar) as "large" | "small" | "none";
+  const theme = useAppSelector(state => state.ui.theme);
+  const sidebar = useAppSelector(state => state.ui.sidebar);
 
   useEffect(() => {
     const theme_from_store = localStorage.getItem("theme");
@@ -28,7 +28,7 @@ const App: React.FC = () => {
     if(sidebar_from_store){
       dispatch(changeSidebar(sidebar_from_store))
     }
-  },[])
+  },[]);
 
   return (
     <div data-theme={theme} data-sidebar={sidebar} >

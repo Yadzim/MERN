@@ -65,12 +65,12 @@ const useForm = () => {
   const getFieldValue = (name: NamePath) => [...ref.current.elements].find(element => element.name === name )?.value;
 
   const resetFields = (fields?: NamePath[]) => {
-    if(fields && fields.length){
+    if(fields?.length){
       [...ref.current.elements].forEach(element => {
         if(fields.includes(element?.name))
           element!.value = null;
       })
-    } else ref.current.reset()
+    } else if(ref.current) ref.current.reset()
   }
 
   const setFieldsValue = (values: RecursivePartial<any>) => {

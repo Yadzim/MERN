@@ -1,0 +1,46 @@
+@import "../../assets/styles/theme";
+
+.e-modal-wrapper{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  // background-color: rgba($color: #000000, $alpha: 0.5);
+  background: rgba(0,0,0, 0.4);
+  z-index: 999;
+  .e-modal{
+    position: fixed;
+    top: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width:420px;
+    background-color: $card;
+    z-index: 1000;
+    border-radius: 1rem;
+    text-align: start;
+
+    .e-modal-header{
+      position: relative;
+      padding: .5rem 1rem;
+      border-bottom: 1px solid $border;
+
+      .e-modal-close-btn{
+        position: absolute;
+        top: .75rem;
+        right: 1rem;
+      }
+    }
+    .e-modal-content{
+      padding: .5rem 1rem;
+    }
+    .e-modal-footer{
+      padding: .5rem 1rem;
+      border-top: 1px solid $border;
+
+      .default-footer{
+        text-align: end;
+      }
+    }
+  }
+}

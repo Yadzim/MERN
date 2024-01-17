@@ -1,11 +1,14 @@
 'use client';
 import React, { useRef, useState } from 'react';
+import EModal from 'ui_components/Modal';
 
 const CardSpotlight = () => {
   const divRef = useRef<HTMLDivElement>(null);
   const [isFocused, setIsFocused] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [opacity, setOpacity] = useState(0);
+
+  const [open, setOpen] = useState(false)
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!divRef.current || isFocused) return;
@@ -36,6 +39,8 @@ const CardSpotlight = () => {
 
   return (
     <div className="mt-12 p-12">
+      <button className="e-btn py-1 px-4" onClick={() => setOpen(p => !p)} >Open</button>
+      <EModal open={open} header={"Modal view"} onCancel={() => setOpen(false)} > rwerwer </EModal>
       <div
         ref={divRef}
         onMouseMove={handleMouseMove}

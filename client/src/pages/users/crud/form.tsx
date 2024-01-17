@@ -1,10 +1,11 @@
 import React, { useState, useEffect, Dispatch } from 'react';
-import useForm from '../../../hook/useForm';
+import useForm from 'hook/useForm';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { URL } from 'config/utils';
+import EModal from 'ui_components/Modal';
 
-const UserForm: React.FC<{ id: number, refetch: any, setClick: Dispatch<{ visible: boolean, id: number }> }> = ({ id, refetch, setClick }): JSX.Element => {
+const UserForm: React.FC<{ open: boolean, id: number, refetch: any, setClick: Dispatch<{ visible: boolean, id: number }> }> = ({ open, id, refetch, setClick }): JSX.Element => {
   const form = useForm();
 
   const { isFetching } = useQuery({
@@ -28,7 +29,7 @@ const UserForm: React.FC<{ id: number, refetch: any, setClick: Dispatch<{ visibl
     enabled: !!id
   });
 
-  const {  data: groups } = useQuery({
+  const { data: groups } = useQuery({
     queryKey: ['groups'],
     queryFn: () => {
       return axios.get(`${URL}/groups`)
@@ -76,29 +77,34 @@ const UserForm: React.FC<{ id: number, refetch: any, setClick: Dispatch<{ visibl
   }
 
   return (
-    <div className="mt-8">
-      <form ref={form.ref} onSubmit={onSubmit} className='inline-block mx-auto p-3 rounded-xl border border-solid border-gray-700'>
-        <div className="d-f justify-between mb-4">
-          <h4 className='text-4xl font-bold' >{id ? "Update" : "Create"} user</h4>
-          <div className='d-f' >
-            <button className="e-btn px-3 text-lg text-red-600 hover:text-red-600 hover:border-red-500 bg-[$element]" type='reset' onClick={() => { setClick({ visible: false, id: 0 }) }} >Cancel</button>
-          </div>
+    <EModal
+      open={open}
+      closeIcon={null}
+      header={<div className="d-f justify-between">
+        <h4 className='text-4xl font-bold' >{id ? "Update" : "Create"} user</h4>
+        <div className='d-f' >
+          <button className="e-btn px-3 text-lg text-red-600 hover:text-red-600 hover:border-red-500 bg-[$element]" onClick={() => { setClick({ visible: false, id: 0 }); form.resetFields() }} >Cancel</button>
         </div>
+      </div>}
+      footer={null}
+    >
+      <form ref={form.ref} onSubmit={onSubmit} className='w-full mx-auto p-3'>
         <div className="form-item text-start">
           <span className="block">F.I.O</span>
-          <input name="name" type="text" className="e-input w-100" placeholder="Input F.I.O ..." />
+          <input name="name" type="text" className="e-input w-full" placeholder="Input F.I.O ..." />
         </div>
         <div className="form-item text-start mt-3">
           <span className="block">Username</span>
-          <input name="username" className="e-input w-100" placeholder="Input username ..." />
+          <input name="username" className="e-input w-full" placeholder="Input username ..." />
         </div>
         <div className="form-item text-start mt-3">
           <span className="block">Email</span>
-          <input name="email" type='email' className="e-input w-100" placeholder="Input email ..." />
+          <input name="email" type='email' className="e-input w-full" placeholder="Input email ..." />
         </div>
         <div className="form-item text-start mt-3">
           <span className="block">Group</span>
-          <select name="group_id" className="e-input w-100" placeholder="Select group ..." >
+          <select name="group_id" className="e-input w-full" placeholder="Select group ..." >
+            <option>Select group</option>
             {
               groups?.data?.groups?.map((e: any) => <option value={e?._id} key={e?._id} >{e?.name}</option>)
             }
@@ -108,7 +114,7 @@ const UserForm: React.FC<{ id: number, refetch: any, setClick: Dispatch<{ visibl
         {/* </div> */}
         <button className="e-btn bg-element block w-full mt-5 px-3 h_2-5" type='submit' >Add</button>
       </form>
-    </div>
+    </EModal>
   );
 };
 

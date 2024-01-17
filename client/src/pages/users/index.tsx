@@ -81,7 +81,8 @@ const Users: React.FC = (): JSX.Element => {
     <div className='user-wrapper e-card m-3 p-3'>
       <h1 className='text-6xl font-bold leading-[100px]' >Users</h1>
 
-      {click.visible ? <UserForm id={click.id} refetch={refetch} setClick={setClick} /> : null}
+      <UserForm open={click.visible} id={click.id} refetch={refetch} setClick={setClick} />
+
 
       {isFetching ? <span>fetching</span> : <span>.</span>}
       {isLoading ? <span>loading</span> : <span>.</span>}

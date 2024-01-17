@@ -17,21 +17,21 @@ const Dashboard: FC = (): JSX.Element => {
 
 
 
-      <div className="row g-4">
-        <div className="col col-sm-12 col-md-6 col-lg-6 col-xl-3"><div className="box e-skeleton"></div></div>
-        <div className="col col-sm-12 col-md-6 col-lg-6 col-xl-3"><div className="box e-skeleton"></div></div>
-        <div className="col col-sm-12 col-md-6 col-lg-6 col-xl-3"><div className="box e-skeleton"></div></div>
-        <div className="col col-sm-12 col-md-6 col-lg-6 col-xl-3"><div className="box e-skeleton"></div></div>
+      <div className="grid grid-cols-4 gap-4">
+        <div className="col"><div className="box e-skeleton"></div></div>
+        <div className="col"><div className="box e-skeleton"></div></div>
+        <div className="col"><div className="box e-skeleton"></div></div>
+        <div className="col"><div className="box e-skeleton"></div></div>
       </div>
-      <div className="row g-4 mt-1">
-        <div className="col col-sm-12 col-md-6 col-lg-6 col-xl-8">
+      <div className="grid grid-cols-3 gap-4 mt-4">
+        <div className="col-span-2">
           <div className="box h_16 flex-center"><h1>Dashboard</h1></div>
-          <div className="row g-4 mt-1">
-            <div className="col col-sm-12 col-md-12 col-lg-6 col-xl-6"><div className="box h_24 e-skeleton"></div></div>
-            <div className="col col-sm-12 col-md-12 col-lg-6 col-xl-6"><div className="box h_24 e-skeleton"></div></div>
+          <div className="grid grid-cols-2 gap-4 mt-4">
+            <div className=""><div className="box h_20 e-skeleton"></div></div>
+            <div className=""><div className="box h_20 e-skeleton"></div></div>
           </div>
         </div>
-        <div className="col col-sm-12 col-md-6 col-lg-6 col-xl-4">
+        <div className="col">
           <div className="box h_36 p-4"></div>
         </div>
       </div>
