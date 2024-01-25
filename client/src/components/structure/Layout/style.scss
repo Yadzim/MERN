@@ -15,7 +15,7 @@
   //  backdrop-filter: blur(100px);
 
   :root{
-    --v--bg: var(--v-bg);
+    --v--bg: var(--e-bg);
   }
 
    .layout {
@@ -26,9 +26,9 @@
      backdrop-filter: blur(100px);
      min-height: 100vh;
     //  background-color: rgba(23, 27, 31, .8);
-    //  background-color: fade(var(--v-bg), 80%);
-    //  $newbg: var(--v-bg);
-    //  background-color: rgba(var(--v-bg), .8);
+    //  background-color: fade(var(--e-bg), 80%);
+    //  $newbg: var(--e-bg);
+    //  background-color: rgba(var(--e-bg), .8);
     // background-color: #171b1fdd;
 
      *::selection {
@@ -39,9 +39,9 @@
      .content {
        position: relative;
        width: calc(100vw - $sidebar);
-       height: calc(100vh - var(--header));
+       height: calc(100vh - var(--e-header));
        overflow-y: scroll;
-       margin-top: var(--header);
+       margin-top: var(--e-header);
        margin-left: $sidebar;
        transition: 0.15s linear;
      }

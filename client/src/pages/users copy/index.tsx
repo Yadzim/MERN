@@ -80,7 +80,7 @@ const Groups: React.FC = (): JSX.Element => {
           <div className='t-th'>Count</div>
           <div className='t-th text-center'>Action</div>
         </div>
-        {/* <div className="t-tr hover:bg-[var(--v-card)] not-hover">
+        {/* <div className="t-tr hover:bg-[var(--e-card)] not-hover">
           <div className="t-td"></div>
           <div className="t-td"><input className='e-input not-bg h-8 w-full' onChange={(e) => filterLike("name", e.target?.value)} /></div>
           <div className="t-td"></div>

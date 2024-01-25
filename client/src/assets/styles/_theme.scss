@@ -5,90 +5,90 @@
 
 // --------------------- default variable ---------------------------------
 :root {
-  --v-border: var(--flat-border);
-  --v-text: var(--flat-text);
-  --v-h_text: var(--flat-h_text);
-  --v-active_text: var(--flat-active_text);
-  --v-placeholder: var(--flat-placeholder);
-  --v-blue: var(--flat-blue);
-  --v-light_blue: var(--flat-light_blue);
-  --v-shadow_blue: var(--flat-shadow_blue);
-  --v-bg: var(--flat-bg);
-  --v-card: var(--flat-card);
-  --v-element: var(--flat-element);
+  --e-border: var(--flat-border);
+  --e-text: var(--flat-text);
+  --e-h_text: var(--flat-h_text);
+  --e-active_text: var(--flat-active_text);
+  --e-placeholder: var(--flat-placeholder);
+  --e-blue: var(--flat-blue);
+  --e-light_blue: var(--flat-light_blue);
+  --e-shadow_blue: var(--flat-shadow_blue);
+  --e-bg: var(--flat-bg);
+  --e-card: var(--flat-card);
+  --e-element: var(--flat-element);
 }
 
 
 //-------------------------- change theme ----------------------------
 [data-theme="dark"] {
-  --v-border: var(--dark-border);
-  --v-text: var(--dark-text);
-  --v-h_text: var(--dark-h_text);
-  --v-active_text: var(--dark-active_text);
-  --v-placeholder: var(--dark-placeholder);
-  --v-blue: var(--dark-blue);
-  --v-light_blue: var(--dark-light_blue);
-  --v-shadow_blue: var(--dark-shadow_blue);
-  --v-bg: var(--dark-bg);
-  --v-card: var(--dark-card);
-  --v-element: var(--dark-element);
+  --e-border: var(--dark-border);
+  --e-text: var(--dark-text);
+  --e-h_text: var(--dark-h_text);
+  --e-active_text: var(--dark-active_text);
+  --e-placeholder: var(--dark-placeholder);
+  --e-blue: var(--dark-blue);
+  --e-light_blue: var(--dark-light_blue);
+  --e-shadow_blue: var(--dark-shadow_blue);
+  --e-bg: var(--dark-bg);
+  --e-card: var(--dark-card);
+  --e-element: var(--dark-element);
 }
 
 [data-theme="light"] {
-  --v-border: var(--light-border);
-  --v-text: var(--light-text);
-  --v-h_text: var(--light-h_text);
-  --v-active_text: var(--light-active_text);
-  --v-placeholder: var(--light-placeholder);
-  --v-blue: var(--light-blue);
-  --v-light_blue: var(--light-light_blue);
-  --v-shadow_blue: var(--light-shadow_blue);
-  --v-bg: var(--light-bg);
-  --v-card: var(--light-card);
-  --v-element: var(--light-element);
+  --e-border: var(--light-border);
+  --e-text: var(--light-text);
+  --e-h_text: var(--light-h_text);
+  --e-active_text: var(--light-active_text);
+  --e-placeholder: var(--light-placeholder);
+  --e-blue: var(--light-blue);
+  --e-light_blue: var(--light-light_blue);
+  --e-shadow_blue: var(--light-shadow_blue);
+  --e-bg: var(--light-bg);
+  --e-card: var(--light-card);
+  --e-element: var(--light-element);
 }
 
 [data-theme="flat"] {
-  --v-border: var(--flat-border);
-  --v-text: var(--flat-text);
-  --v-h_text: var(--flat-h_text);
-  --v-active_text: var(--flat-active_text);
-  --v-placeholder: var(--flat-placeholder);
-  --v-blue: var(--flat-blue);
-  --v-light_blue: var(--flat-light_blue);
-  --v-shadow_blue: var(--flat-shadow_blue);
-  --v-bg: var(--flat-bg);
-  --v-card: var(--flat-card);
-  --v-element: var(--flat-element);
+  --e-border: var(--flat-border);
+  --e-text: var(--flat-text);
+  --e-h_text: var(--flat-h_text);
+  --e-active_text: var(--flat-active_text);
+  --e-placeholder: var(--flat-placeholder);
+  --e-blue: var(--flat-blue);
+  --e-light_blue: var(--flat-light_blue);
+  --e-shadow_blue: var(--flat-shadow_blue);
+  --e-bg: var(--flat-bg);
+  --e-card: var(--flat-card);
+  --e-element: var(--flat-element);
 }
 
 [data-theme="blue"] {
-  --v-border: var(--blue-border);
-  --v-text: var(--blue-text);
-  --v-h_text: var(--blue-h_text);
-  --v-active_text: var(--blue-active_text);
-  --v-placeholder: var(--blue-placeholder);
-  --v-blue: var(--blue-blue);
-  --v-light_blue: var(--blue-light_blue);
-  --v-shadow_blue: var(--blue-shadow_blue);
-  --v-bg: var(--blue-bg);
-  --v-card: var(--blue-card);
-  --v-element: var(--blue-element);
+  --e-border: var(--blue-border);
+  --e-text: var(--blue-text);
+  --e-h_text: var(--blue-h_text);
+  --e-active_text: var(--blue-active_text);
+  --e-placeholder: var(--blue-placeholder);
+  --e-blue: var(--blue-blue);
+  --e-light_blue: var(--blue-light_blue);
+  --e-shadow_blue: var(--blue-shadow_blue);
+  --e-bg: var(--blue-bg);
+  --e-card: var(--blue-card);
+  --e-element: var(--blue-element);
 }
 
 
 // -------------------- sass variable -----------------------------
-$border: var(--v-border);
-$text: var(--v-text);
-$h_text: var(--v-h_text);
-$active_text: var(--v-active_text);
-$placeholder: var(--v-placeholder);
-$blue: var(--v-blue);
-$light_blue: var(--v-light_blue);
-$shadow_blue: var(--v-shadow_blue);
-$bg: var(--v-bg);
-$card: var(--v-card);
-$element: var(--v-element);
+$border: var(--e-border);
+$text: var(--e-text);
+$h_text: var(--e-h_text);
+$active_text: var(--e-active_text);
+$placeholder: var(--e-placeholder);
+$blue: var(--e-blue);
+$light_blue: var(--e-light_blue);
+$shadow_blue: var(--e-shadow_blue);
+$bg: var(--e-bg);
+$card: var(--e-card);
+$element: var(--e-element);
 
 
 

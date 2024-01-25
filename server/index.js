@@ -7,8 +7,8 @@ const path = require("path");
 const morgan = require("morgan");
 const mongoose = require("mongoose");
 
-const user = require("./routers/user");
-const group = require("./routers/group");
+const user = require("./routers/userRouter");
+const group = require("./routers/groupRouter");
 
 const mongoURI = "mongodb://localhost/simple_crud";
 mongoose.connect(mongoURI, { useNewUrlParser: true, family: 4})

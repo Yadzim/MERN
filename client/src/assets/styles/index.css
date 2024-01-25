@@ -19,5 +19,8 @@ code {
 
 
 :root {
-  --header: 60px;
+  --e-header: 60px;
+  --e-transition: 0.15s linear;
+  --e-border-radius: 0.5rem;
+
 }

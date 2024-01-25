@@ -108,7 +108,7 @@ const Users: React.FC = (): JSX.Element => {
           <div className='t-th'>group</div>
           <div className='t-th text-center'>Action</div>
         </div>
-        <div className="t-tr hover:bg-[var(--v-card)] not-hover">
+        <div className="t-tr hover:bg-[var(--e-card)] not-hover">
           <div className="t-td"></div>
           <div className="t-td"><input className='e-input not-bg h-8 w-full' placeholder='Search by name ...' onChange={(e) => _filter_like("name", e.target?.value)}/></div>
           <div className="t-td"><input className='e-input not-bg h-8 w-full' placeholder='Search by username ...' onChange={(e) => _filter_like("username", e.target?.value)}/></div>

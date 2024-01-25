@@ -1,5 +1,5 @@
 import { RoutesTypeChildren } from "./types";
-import { FaCalendarAlt, FaChartLine, FaCloudRain, FaCloudSun, FaHome, FaMusic, FaShoppingCart, FaSignInAlt, FaUserAlt } from "react-icons/fa"
+import { FaCalendarAlt, FaChartLine, FaCloudRain, FaCloudSun, FaComments, FaHome, FaMusic, FaShoppingCart, FaSignInAlt, FaUserAlt } from "react-icons/fa"
 import Dashboard from "pages/dashboards";
 import AllMusic from "pages/music";
 import Shop from "pages/shop";
@@ -12,6 +12,7 @@ import Users from "pages/users";
 import Groups from "pages/users copy";
 import Weather from "pages/weather";
 import Chart from "pages/Chart";
+import Chat from "pages/chat";
 
 
 export const public_routes: Array<RoutesTypeChildren> = [
@@ -160,12 +161,12 @@ export const public_routes: Array<RoutesTypeChildren> = [
     submenu: [],
   },
   {
-    name: "Chart",
-    path: "/chart",
-    component: Chart,
+    name: "Chat",
+    path: "/chat",
+    component: Chat,
     config: {
       key: "unlock",
-      icon: FaChartLine,
+      icon: FaComments,
       structure: "layout",
       exact: true,
       isMenu: true,

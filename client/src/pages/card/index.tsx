@@ -40,7 +40,9 @@ const CardSpotlight = () => {
   return (
     <div className="mt-12 p-12">
       <button className="e-btn py-1 px-4" onClick={() => setOpen(p => !p)} >Open</button>
-      <EModal open={open} header={"Modal view"} onCancel={() => setOpen(false)} > rwerwer </EModal>
+      <EModal open={open} header={"Modal view"} onClose={() => setOpen(false)} >
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit magnam facere aut velit ea possimus temporibus assumenda officiis tempore totam dignissimos est nulla perferendis natus necessitatibus, veniam iusto. Voluptatum provident officia maiores sit quos quae.
+       </EModal>
       <div
         ref={divRef}
         onMouseMove={handleMouseMove}
