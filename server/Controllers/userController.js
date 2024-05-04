@@ -60,7 +60,7 @@ const createUser = async (req, res) => {
       return;
     }
 
-    const newUser = new User({ ...req.body });
+    const newUser = new UserModel({ ...req.body });
     await newUser.save();
     res.json({ data: newUser, status: 1, message: "User added successfully" });
   } catch (error) {
